@@ -19,14 +19,18 @@ class ViewController: UIViewController
     
     @IBAction func firstMethod(_ sender: UIButton)
     {
-        if(firstButton.backgroundColor == .yellow)
+        /*if(firstButton.backgroundColor == .yellow)
         {
             firstButton.backgroundColor = .black
         }
         else
         {
             firstButton.backgroundColor = .yellow
-        }
+        }*/
+        view.backgroundColor = createRandomColor()
+        firstButton.setTitleColor(createRandomColor(), for: .normal)
+        firstButton.backgroundColor = createRandomColor()
+        
         view.backgroundColor = createRandomColor()
     }
     

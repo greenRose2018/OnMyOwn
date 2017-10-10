@@ -35,6 +35,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B63A1FFE1F8D189B00F2FAB0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6D400481F8D0475007ADBAC /* AppDelegate.swift */,
+				B6D4004A1F8D0475007ADBAC /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B63A1FFF1F8D18B700F2FAB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6D4004C1F8D0475007ADBAC /* Main.storyboard */,
+				B6D400511F8D0475007ADBAC /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B63A20001F8D18E700F2FAB0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B6D4004F1F8D0475007ADBAC /* Assets.xcassets */,
+				B6D400541F8D0475007ADBAC /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B6D4003C1F8D0475007ADBAC = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +81,9 @@
 		B6D400471F8D0475007ADBAC /* OnMyOwn */ = {
 			isa = PBXGroup;
 			children = (
-				B6D400481F8D0475007ADBAC /* AppDelegate.swift */,
-				B6D4004A1F8D0475007ADBAC /* ViewController.swift */,
-				B6D4004C1F8D0475007ADBAC /* Main.storyboard */,
-				B6D4004F1F8D0475007ADBAC /* Assets.xcassets */,
-				B6D400511F8D0475007ADBAC /* LaunchScreen.storyboard */,
-				B6D400541F8D0475007ADBAC /* Info.plist */,
+				B63A1FFE1F8D189B00F2FAB0 /* Controller */,
+				B63A1FFF1F8D18B700F2FAB0 /* View */,
+				B63A20001F8D18E700F2FAB0 /* Resources */,
 			);
 			path = OnMyOwn;
 			sourceTree = "<group>";
@@ -275,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = OnMyOwn/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OnMyOwn/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.OnMyOwn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = OnMyOwn/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OnMyOwn/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.OnMyOwn;
 				PRODUCT_NAME = "$(TARGET_NAME)";

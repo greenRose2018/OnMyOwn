@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController
 {
+    lazy var colorTool : ColorTools = ColorTools()
+    
     @IBOutlet weak var firstButton: UIButton!
     @IBOutlet weak var uniqueBtn: UIButton!
     @IBOutlet weak var simpleProgress: UIProgressView!
@@ -32,16 +34,16 @@ class ViewController: UIViewController
         {
             firstButton.backgroundColor = .yellow
         }*/
-        view.backgroundColor = createRandomColor()
-        firstButton.setTitleColor(createRandomColor(), for: .normal)
-        firstButton.backgroundColor = createRandomColor()
+        view.backgroundColor = colorTool.createRandomColor()
+        firstButton.setTitleColor(colorTool.createRandomColor(), for: .normal)
+        firstButton.backgroundColor = colorTool.createRandomColor()
         
-        view.backgroundColor = createRandomColor()
+        view.backgroundColor = colorTool.createRandomColor()
     }
     
     @IBAction func colorChangeBtn(_ sender: UIButton)
     {
-        uniqueBtn.setTitleColor(createRandomColor(), for: .normal)
+        uniqueBtn.setTitleColor(colorTool.createRandomColor(), for: .normal)
         view.backgroundColor = .white
         
         uniqueBtn.layer.borderWidth = 2
@@ -66,16 +68,7 @@ class ViewController: UIViewController
             simpleLabel.text = "complete"
         }
     }
-    
-    private func createRandomColor()  ->  UIColor
-    {
-        let newColor : UIColor
-        let redAmount = CGFloat (Double (arc4random_uniform(256))/255.00)
-        let blueAmount = CGFloat (Double (arc4random_uniform(256))/255.00)
-        let greenAmount = CGFloat (Double (arc4random_uniform(256))/255.00)
-        newColor = UIColor(red: redAmount, green:greenAmount,blue:blueAmount, alpha:CGFloat(1.0))
-        return newColor
-    }
+
 
     override func didReceiveMemoryWarning()
 {

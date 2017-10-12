@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController
 {
     @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var uniqueBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,16 @@ class ViewController: UIViewController
         view.backgroundColor = createRandomColor()
     }
     
+    @IBAction func colorChangeBtn(_ sender: UIButton)
+    {
+        uniqueBtn.setTitleColor(createRandomColor(), for: .normal)
+        view.backgroundColor = .white
+        
+        uniqueBtn.layer.borderWidth = 2
+        uniqueBtn.layer.cornerRadius = 5
+        uniqueBtn.layer.borderColor = UIColor.black.cgColor
+        
+    }
     
     private func createRandomColor()  ->  UIColor
     {

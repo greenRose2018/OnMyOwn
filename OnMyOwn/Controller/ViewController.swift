@@ -12,6 +12,10 @@ class ViewController: UIViewController
 {
     @IBOutlet weak var firstButton: UIButton!
     @IBOutlet weak var uniqueBtn: UIButton!
+    @IBOutlet weak var simpleProgress: UIProgressView!
+    @IBOutlet weak var simpleLabel: UILabel!
+    
+    var current: Int  = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +48,23 @@ class ViewController: UIViewController
         uniqueBtn.layer.cornerRadius = 5
         uniqueBtn.layer.borderColor = UIColor.black.cgColor
         
+    }
+    
+    @IBAction func actionTriggered(_ sender: UIButton)
+    {
+        let i = current
+        let max = 10
+        
+        if i <= max {
+            let ratio = Float(i) / Float(max)
+            simpleProgress.progress = Float(ratio)
+            simpleLabel.text = "Processing\(i) of \(max)..."
+            current+=1
+        }
+        if i == max
+        {
+            simpleLabel.text = "complete"
+        }
     }
     
     private func createRandomColor()  ->  UIColor

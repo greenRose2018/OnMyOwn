@@ -51,12 +51,29 @@
                                 <color key="progressTintColor" red="0.0" green="1" blue="0.50196081400000003" alpha="0.78175834759999996" colorSpace="calibratedRGB"/>
                                 <color key="trackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKd-8s-oyc">
+                                <rect key="frame" x="67" y="433" width="66" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Try me!"/>
+                                <connections>
+                                    <action selector="actionTriggered:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="vGN-i2-6Nw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eiu-Wo-YbE">
+                                <rect key="frame" x="36" y="514" width="306" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="firstButton" destination="UI6-Ht-VTh" id="q1X-en-Cfb"/>
+                        <outlet property="simpleLabel" destination="Eiu-Wo-YbE" id="1b9-VB-PdQ"/>
+                        <outlet property="simpleProgress" destination="YS1-HH-ijp" id="Iys-Ro-3kF"/>
                         <outlet property="uniqueBtn" destination="lPV-4Q-hPW" id="RD1-bI-4mG"/>
                     </connections>
                 </viewController>

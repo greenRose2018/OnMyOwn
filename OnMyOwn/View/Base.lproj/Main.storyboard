@@ -105,6 +105,14 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="3op-gm-thn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kz-sf-oBT">
+                                <rect key="frame" x="164" y="425" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="next"/>
+                                <connections>
+                                    <segue destination="qcN-uX-1lr" kind="show" id="UgJ-PO-wR4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Fw0-Wu-EDZ"/>
@@ -112,7 +120,90 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGy-VH-BRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="617" y="117"/>
+            <point key="canvasLocation" x="607" y="-112"/>
+        </scene>
+        <!--Third Screen View Controller-->
+        <scene sceneID="WG9-rq-ver">
+            <objects>
+                <viewController id="qcN-uX-1lr" customClass="thirdScreenViewController" customModule="OnMyOwn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VX7-OQ-Soq" customClass="thirdScreenViewControllers" customModule="OnMyOwn" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah8-ht-Fcl">
+                                <rect key="frame" x="158" y="336" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="previous"/>
+                                <connections>
+                                    <segue destination="xEv-E3-G8j" kind="show" id="a18-W7-agP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSn-G6-lgY">
+                                <rect key="frame" x="151" y="453" width="46" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="next"/>
+                                <connections>
+                                    <segue destination="tZW-Ak-mSw" kind="show" id="x9A-an-Kvu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="hu3-aU-gSX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TRw-tz-Pyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1798" y="61"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="A8v-hC-D6R">
+            <objects>
+                <viewController id="tZW-Ak-mSw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="teI-9h-9be" customClass="Fourth" customModule="OnMyOwn" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AG-iE-xt5">
+                                <rect key="frame" x="153" y="355" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="prev/back"/>
+                                <connections>
+                                    <segue destination="qcN-uX-1lr" kind="show" id="SmN-7M-lDC"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="eG7-ls-CZd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="529861557.83008802">
+                                    <!--2017-10-16 15:45:57 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="date:" destination="teI-9h-9be" eventType="valueChanged" id="IlR-eS-z45"/>
+                                </connections>
+                            </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="testing" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bNs-MO-l2w">
+                                <rect key="frame" x="67" y="231" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="k4K-8r-FKo"/>
+                        <connections>
+                            <outlet property="date" destination="eG7-ls-CZd" id="Dz8-Zu-K4r"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzx-Pz-tfq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.60000000000002" y="826.23688155922048"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="x9A-an-Kvu"/>
+        <segue reference="SmN-7M-lDC"/>
+        <segue reference="a18-W7-agP"/>
+    </inferredMetricsTieBreakers>
 </document>
